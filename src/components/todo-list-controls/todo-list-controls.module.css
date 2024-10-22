@@ -1,0 +1,55 @@
+.controlsWrapper {
+    display: flex;
+	gap: 10px;
+	padding: 30px;
+	width: 100%;
+    border-bottom: 1px solid purple;
+}
+
+.search {
+    position: relative;
+    flex-grow: 1;
+    background: no-repeat url(./search-svgrepo-com.svg);
+    background-size: contain;
+}
+
+.search::before {
+    content: url(./search-svgrepo-com.svg);
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 24px;
+    height: 24px;
+}
+
+.search input { 
+    padding: 10px;
+    padding-left: 3rem;
+    width: 100%;    	
+	font-size: 1rem;
+	color: purple;
+    border: none;
+    border-bottom: 1px solid purple;
+}
+
+.search input:focus {
+    outline-color: purple;
+}
+
+.sorting {
+    display: flex;
+    align-items: center;
+}
+
+.sortingButton {
+    width: 24px;
+    height: 24px;
+    background: no-repeat url(./arrow-narrow-up-svgrepo-com.svg);
+    border: none;
+    cursor: pointer;
+}
+
+.sortingButton:last-child {
+    transform: rotate(180deg);
+}

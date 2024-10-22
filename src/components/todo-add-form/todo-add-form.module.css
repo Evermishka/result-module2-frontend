@@ -1,0 +1,33 @@
+.todoAddForm {
+	display: flex;
+	gap: 10px;
+	padding: 30px;
+	width: 100%;
+	border-bottom: 1px solid purple;
+}
+
+.todoAddInput {
+	width: 100%;
+	padding: 10px;	
+	font-size: 1rem;
+	color: purple;
+	border: 1px solid purple;
+}
+
+.todoAddInput:focus {
+	outline-color: purple;
+}
+
+.todoAddButton {
+	padding: 10px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	background-color: purple;
+	border: none;
+}
+
+.todoAddButton:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}

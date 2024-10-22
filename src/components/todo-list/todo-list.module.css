@@ -1,0 +1,111 @@
+.loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25px;
+	height: 25px;
+	border: 5px solid purple;
+	border-radius: 50%;
+	border-left-color: transparent;
+	animation: loader 1s infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.todoList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	padding: 30px;
+	width: 100%;
+	list-style: none;
+}
+
+.todoList p  {
+	font-size: 2rem;
+	text-align: center;
+}
+
+.todoItem {
+	display: flex;
+	gap: 10px;
+	font-size: 1.5rem;
+}
+
+.todoItemCompleted {
+	opacity: 30%;
+}
+
+.todoItemCompleted span {	
+	text-decoration: line-through;
+}
+
+.todoItem input {
+	appearance: none;
+	position: relative;
+	width: 1.8rem;
+	height: 1.8rem;
+	background: white;
+	border-radius: 5px;
+	border: 1px solid purple;
+	transition: 500ms;
+}
+
+.todoItemCompleted input::after {
+	content: '\2714';
+	position: absolute;
+	top: -6px;
+	left: 1px;
+	width: 30px;
+	height: 30px;
+	font-size: 1.8rem;
+	color: purple;
+	transition: 500ms;
+	overflow: hidden;
+}
+
+.todoItem button {
+	position: relative;
+	margin-right: 15px;
+	margin-left: auto;
+	border: none;
+	cursor: pointer;
+}
+
+.todoItem button span {
+	display: none;
+}
+
+.todoItem button::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 30px;
+	background-color: purple;
+	transform: rotate(45deg);
+}
+
+.todoItem button::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 30px;
+	background-color: purple;
+	transform: rotate(-45deg);
+}
